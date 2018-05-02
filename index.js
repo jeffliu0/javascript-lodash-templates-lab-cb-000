@@ -3,10 +3,13 @@ function createPost(){
   var body = document.getElementById('body').value
   var author = document.getElementById('author').value
 
-  var postTemplate = document.getElementById('post-form').innerHTML
+  var postTemplate = document.getElementById("post-template").innerHTML
+  var pageTemplate = document.getElementById("page-template").innerHTML
   var templateFn = _.template(postTemplate)
+  var templateFn = _.template(pageTemplate)
 
   var postsDiv = document.getElementById('post')
+  //var pageDiv = document.getElementById(;'sidebar')
 
   var templateHTML = templateFn({'title': title,
   'body': body, 'author': author})
@@ -20,7 +23,7 @@ function postComment(){
   var commenter = document.getElementById('commenterName').value
   var comment = document.getElementById('commentText').value
 
-  var commentTemplate = document.getElementById('comments-template').innerHTML
+  var commentTemplate = document.getElementById('comment-template').innerHTML
 
   var templateFn = _.template(commentTemplate)
 
