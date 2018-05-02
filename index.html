@@ -12,7 +12,7 @@
         <input type="submit">
       </form>
 
-      <div id="comment"></div>
+      <div id="comments"></div>
 
      </main>
     <script src="node_modules/lodash/lodash.min.js"></script>
@@ -27,8 +27,8 @@
 
     <script id = "comment-template" type= "text/x-lodash-template">
         <div id="comment">
-          <div id="commentText"><%- comment %></div>
-          <div id="commenterName">
+          <div id="comment-body"><%- comment %></div>
+          <div id="commenter">
             <p>
               <footer><%- commenter %></footer>
             </p>
@@ -51,11 +51,11 @@
 
     <script id = "comments-template" type= "text/x-lodash-template">
 
-    <form onsubmit="postComment();return false;">
-      Name: <input type="text" id="commenterName"><br>
-      Comment: <input type="textarea" id="commentText"><br>
-      <input type="submit">
-    </form>
+      <form onsubmit="postComment();return false;">
+         Name: <input type="text" id="commenterName"><br>
+         Comment: <input type="textarea" id="commentText"><br>
+         <input type="submit">
+      </form>
       <div id="comments"></div>
     </script>
 
