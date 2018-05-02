@@ -8,7 +8,7 @@ function createPost(){
   var templateFn = _.template(postTemplate)
   var templateFn = _.template(pageTemplate)
 
-  var postsDiv = document.getElementById('post')
+  var postsDiv = document.getElementById('post-form')
   //var pageDiv = document.getElementById(;'sidebar')
 
   var templateHTML = templateFn({'title': title,
